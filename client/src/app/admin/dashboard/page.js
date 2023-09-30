@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const FacultyDashboard = () => {
+export default function page() {
   return (
     <>
       <div className="block">
@@ -57,5 +57,4 @@ const FacultyDashboard = () => {
       </div>
     </>
   );
-};
-export default FacultyDashboard;
+}
