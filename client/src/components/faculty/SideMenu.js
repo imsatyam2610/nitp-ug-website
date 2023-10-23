@@ -35,7 +35,7 @@ export const FacultyMenuItems = [
   {
     text: "Noticeboard",
     icon: <CiUser size={16} />,
-    path: "/faculty/notice",
+    path: "/faculty/noticeboard",
   },
   {
     text: "Events",
