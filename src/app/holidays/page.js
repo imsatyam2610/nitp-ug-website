@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Holidays() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5001/api/holiday/get-all-holidays")
+    fetch(`${process.env.API_URL}holiday/get-all-holidays`)
       .then((response) => response.json())
       .then((data) => {
         const formattedData = data.map((event) => {

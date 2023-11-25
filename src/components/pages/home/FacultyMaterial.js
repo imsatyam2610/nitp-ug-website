@@ -8,7 +8,7 @@ const FacultyMaterial = () => {
   useEffect(() => {
     // Fetch materials from your backend API
     fetch(
-      "http://localhost:5001/api/material/by-material-type/Faculty%20Material"
+      `${process.env.API_URL}material/by-material-type/Faculty%20Material`
     )
       .then((response) => response.json())
       .then((data) => {

@@ -10,7 +10,7 @@ export default function FacultyClassRoutine() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/routine/get-all-routine")
+    fetch(`${process.env.API_URL}routine/get-all-routine`)
       .then((response) => response.json())
       .then((data) => {
         // Group routines by day

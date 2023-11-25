@@ -10,7 +10,7 @@ export default function AddEvent({ handleOk, handleCancel }) {
       const formData = await form.validateFields();
       console.log(formData);
 
-      const response = await fetch("http://localhost:5001/api/event/create", {
+      const response = await fetch(`${process.env.API_URL}event/create`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {

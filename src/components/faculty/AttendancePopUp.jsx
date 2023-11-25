@@ -54,7 +54,7 @@ const AttendancePopUp = ({ handleOk, handleCancel }) => {
       };
 
       const response = await fetch(
-        "http://localhost:5001/api/attendance/add-attendance",
+        `${process.env.API_URL}attendance/add-attendance`,
         {
           method: "POST",
           headers: {

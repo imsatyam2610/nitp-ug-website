@@ -10,7 +10,7 @@ export default function CreateNotice({ handleOk, handleCancel }) {
       const formData = await form.validateFields();
       console.log(formData);
 
-      const response = await fetch("http://localhost:5001/api/notice/create", {
+      const response = await fetch(`${process.env.API_URL}notice/create`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {

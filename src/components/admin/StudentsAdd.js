@@ -20,7 +20,7 @@ export default function StudentAdd() {
       console.log(formData);
 
       const response = await fetch(
-        "http://localhost:5001/api/student/register",
+        `${process.env.API_URL}student/register`,
         {
           method: "POST",
           headers: {

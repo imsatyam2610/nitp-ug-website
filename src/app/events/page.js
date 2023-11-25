@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Events() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5001/api/event/get-all-events")
+    fetch(`${process.env.API_URL}event/get-all-events`)
       .then((response) => response.json())
       .then((data) => {
         const formattedData = data.map((event) => {

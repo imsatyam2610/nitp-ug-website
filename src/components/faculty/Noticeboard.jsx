@@ -37,7 +37,7 @@ export default function FacultyNoticeboard() {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/notice/get-all-notices")
+    fetch(`${process.env.API_URL}notice/get-all-notices`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data

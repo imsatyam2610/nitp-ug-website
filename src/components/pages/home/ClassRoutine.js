@@ -8,7 +8,7 @@ const ClassRoutine = () => {
   useEffect(() => {
     // Define your API endpoint
     const apiUrl =
-      "http://localhost:5001/api/notice/getnotice/Civil%20Engineering";
+      `${process.env.API_URL}notice/getnotice/Civil%20Engineering`;
 
     // Fetch data from the API
     const fetchData = async () => {

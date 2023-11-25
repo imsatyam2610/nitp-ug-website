@@ -32,7 +32,7 @@ export default function FacultyEvents() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/event/get-all-events")
+    fetch(`${process.env.API_URL}event/get-all-events`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data

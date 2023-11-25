@@ -6,7 +6,7 @@ export default function FacultyStudents() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/student/get-student-faculty")
+    fetch(`${process.env.API_URL}student/get-student-faculty`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data

@@ -34,7 +34,7 @@ export default function MaterialUpload({ handleOk, handleCancel }) {
       formData.append("file", file);
 
       const response = await fetch(
-        "http://localhost:5001/api/material/create",
+        `${process.env.API_URL}material/create`,
         {
           method: "POST",
           body: formData,

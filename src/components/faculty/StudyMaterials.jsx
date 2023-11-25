@@ -53,7 +53,7 @@ export default function FacultyStudyMaterials() {
     },
   ];
   useEffect(() => {
-    fetch("http://localhost:5001/api/material/get-all-material")
+    fetch(`${process.env.API_URL}material/get-all-material`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data

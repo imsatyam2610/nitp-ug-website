@@ -11,7 +11,7 @@ export default function AddSyllabus({ handleOk, handleCancel }) {
       console.log(formData);
 
       const response = await fetch(
-        "http://localhost:5001/api/syllabus/create",
+        `${process.env.API_URL}syllabus/create`,
         {
           method: "POST",
           body: JSON.stringify(formData),

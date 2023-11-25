@@ -43,7 +43,7 @@ export default function FacultySyllabus() {
     },
   ];
   useEffect(() => {
-    fetch("http://localhost:5001/api/syllabus/get-all-syllabus")
+    fetch(`${process.env.API_URL}syllabus/get-all-syllabus`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data

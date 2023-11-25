@@ -27,7 +27,7 @@ export default function FacultyHolidays() {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/holiday/get-all-holidays")
+    fetch(`${process.env.API_URL}holiday/get-all-holidays`)
       .then((response) => response.json())
       .then((data) => {
         // Add serial numbers to the data
