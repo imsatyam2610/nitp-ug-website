@@ -33,7 +33,7 @@ const AttendancePopUp = ({ handleOk, handleCancel }) => {
   const fetchStudentList = async () => {
     // Make an API request to your backend with the selected options
     const response = await fetch(
-      `http://localhost:5001/api/student/attendance?studentclass=${classValue}&section=${sectionValue}&group=${groupValue}`
+      `${process.env.API_URL}student/attendance?studentclass=${classValue}&section=${sectionValue}&group=${groupValue}`
     );
     const data = await response.json();
     console.log(data);

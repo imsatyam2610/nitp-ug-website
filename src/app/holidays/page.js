@@ -27,7 +27,7 @@ export default function Holidays() {
     <>
       <Navbar />
       <div className="bg-dlmode container mx-auto">
-        <h1 className="sm:text-3xl text-2xl font-bold my-2">Events</h1>
+        <h1 className="sm:text-3xl text-2xl font-bold my-2">Holidays</h1>
         <div className="bg-[#00a3ff] rounded-lg p-5">
           <div className="pt-2">
             <ul className="flex flex-col">
