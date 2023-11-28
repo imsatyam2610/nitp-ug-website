@@ -33,7 +33,7 @@ export default function Attendance() {
   const fetchAttendanceData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5001/api/attendance/attendance-report?date=${selectedDate}&month=${selectedMonth}&year=${selectedYear}&department=${selectedDepartment}&section=${selectedSection}&group=${selectedGroup}`
+        `${process.env.API_URL}attendance/attendance-report?date=${selectedDate}&month=${selectedMonth}&year=${selectedYear}&department=${selectedDepartment}&section=${selectedSection}&group=${selectedGroup}`
       );
 
       if (!response.ok) {
