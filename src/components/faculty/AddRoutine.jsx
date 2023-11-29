@@ -1,5 +1,5 @@
 "use client";
-import { Drawer, Form, Input, Select, TimePicker } from "antd";
+import { Drawer, Form, Input, Select, TimePicker, message } from "antd";
 const { Option } = Select;
 
 export default function AddRoutine({ handleOk, handleCancel }) {
@@ -20,12 +20,15 @@ export default function AddRoutine({ handleOk, handleCancel }) {
 
       if (response.status === 201) {
         form.resetFields();
+        handleCancel();
+        message.success("Routine Added successfully");
         const responseData = await response.json();
         console.log("Notice created successfully:", responseData);
       } else {
         // Handle errors
         const errorData = await response.json();
         console.error("Error creating notice:", errorData);
+        message.error("Failed to record routine");
       }
     } catch (error) {
       console.error("Error creating notice:", error);
@@ -76,7 +79,7 @@ export default function AddRoutine({ handleOk, handleCancel }) {
             </Select>
           </Form.Item>
           <Form.Item
-            label="day"
+            label="Day"
             name="day"
             rules={[
               {
@@ -106,11 +109,16 @@ export default function AddRoutine({ handleOk, handleCancel }) {
           >
             <Select placeholder="Select a option to choose subject">
               <Option value="Physics">Physics</Option>
+              <Option value="Physics Lab">Physics Lab</Option>
               <Option value="Mechanics">Mechanics</Option>
               <Option value="English">English</Option>
+              <Option value="English Lab">English Lab</Option>
               <Option value="IT">IT</Option>
+              <Option value="IT Lab">IT Lab</Option>
               <Option value="Workshop">Workshop</Option>
+              <Option value="Workshop Lab">Workshop Lab</Option>
               <Option value="EAA">EAA</Option>
+              <Option value="AutoCAD">AutoCAD</Option>
             </Select>
           </Form.Item>
           <Form.Item
@@ -137,6 +145,15 @@ export default function AddRoutine({ handleOk, handleCancel }) {
           >
             <Select placeholder="Select a option to choose teacher">
               <Option value="Subrata Majumder">Subrata Majumder</Option>
+              <Option value="Joseph Tripura">Joseph Tripura</Option>
+              <Option value="S.K.Jaiswal">S.K.Jaiswal</Option>
+              <Option value="Lini Dev">Lini Dev</Option>
+              <Option value="Zeeshan Ali">Zeeshan Ali</Option>
+              <Option value="Achinta Sarkar">Achinta Sarkar</Option>
+              <Option value="VK Choubey">VK Choubey</Option>
+              <Option value="Jayanta Kumar Biswas">Jayanta Kumar Biswas</Option>
+              <Option value="S.K.Murmu">S.K.Murmu</Option>
+              <Option value="Ashish Ranjan Sinha">Ashish Ranjan Sinha</Option>
             </Select>
           </Form.Item>
           <Form.Item
