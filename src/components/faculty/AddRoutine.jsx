@@ -168,6 +168,10 @@ export default function AddRoutine({ handleOk, handleCancel }) {
           >
             <Select placeholder="Select a option to choose subject">
               <Option value="Common Room">Common Room</Option>
+              <Option value="Physics Lab">Physics Lab</Option>
+              <Option value="Computer Center">Computer Center</Option>
+              <Option value="Civil Computer Lab">Civil Computer Lab</Option>
+              <Option value="Workshop Lab">Workshop Lab</Option>
             </Select>
           </Form.Item>
           <Form.Item>
