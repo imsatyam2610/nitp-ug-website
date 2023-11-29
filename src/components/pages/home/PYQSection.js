@@ -7,7 +7,7 @@ const PYQs = () => {
 
   useEffect(() => {
     // Fetch materials from your backend API
-    fetch(`${process.env.API_URL}material/by-material-type/PYQ`)
+    fetch(`${process.env.API_URL}material/by-material-type/PYQs`)
       .then((response) => response.json())
       .then((data) => {
         setMaterials(data);
